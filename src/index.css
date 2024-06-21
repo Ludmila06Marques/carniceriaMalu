@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif ,'Merienda';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +11,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* src/App.css */
+.carousel {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
+  max-height: 80vh; /* Define uma altura máxima para as imagens */
+  object-fit: cover; /* Ajusta a imagem para preencher o contêiner sem distorção */
+  border-radius: 10px;
 }

@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { useState } from "react"
+import LandingPage from "./Components/Top"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+
+  body {
+    font-family: 'Merienda', cursive;
+  }
+`;
+export default function App(){
+  
+
+    return(<>
+    
+
+   <BrowserRouter>
+    <Routes>
+        
+        <Route  path="/" element={<LandingPage/>}></Route> 
+        <Route  path="/nosotros" element={<LandingPage/>}></Route> 
+     
+       
+    </Routes>    
+    </BrowserRouter>
+   
+    
+    </>)
 }
-
-export default App;
+//  <Route  path="/home/:idDaOption" element={<OptionScreen/>}></Route> 
